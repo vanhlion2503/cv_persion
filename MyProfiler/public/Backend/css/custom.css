@@ -1,0 +1,53 @@
+
+.mx10{
+    margin: 10px 0px;
+}
+.hidden { 
+    display: none; 
+}
+.user-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;  /* Giúp ảnh không bị kéo dãn */
+    border-radius: 40%;  /* Tạo hiệu ứng hình tròn */
+    border: 5px white solid;
+}
+.box{
+    height: 500px;
+}
+.card{
+    padding: 20px;
+}
+
+/* Tăng kích thước icon */
+#selected-icon {
+    font-size: 3rem; /* Tăng kích thước icon */
+}
+
+/* Tăng kích thước ô chọn */
+#icon {
+    border: 0px solid gray;
+    border-radius: 5px;
+    font-size: 20px;  /* Tăng kích thước chữ trong ô chọn */
+    padding: 10px 0px; /* Tăng khoảng cách bên trong ô chọn */
+    width: 250px;
+    height: auto;       /* Đảm bảo chiều cao tự động điều chỉnh theo nội dung */
+}
+
+/* Tăng kích thước phần input-group để đồng bộ với icon */
+.input-group-text {
+    padding: 10px 20px; /* Tăng khoảng cách bên trong để icon không bị chèn sát */
+}
+/* social */
+.button-group {
+    display: flex;
+    gap: 10px;  /* Khoảng cách giữa các nút */
+    align-items: center;  /* Căn giữa theo chiều dọc */
+}
+
+.fs2{
+    font-size: 20px;
+}
+.pl20{
+    padding-left: 20px;
+}
