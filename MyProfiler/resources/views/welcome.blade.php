@@ -67,7 +67,7 @@
 				<div class="header__left">
 					<div class="header__photo">
 						<img class="header__photo-img" 
-							src="{{ $user->image ? asset('storage/' . $user->image) : asset('images/default-avatar.png') }}" 
+							src="{{ Auth::user()->image ?? asset('default-avatar.jpg') }}" 
 							alt="{{ $user->name }}">
 					</div>
 					<div class="header__base-info">
@@ -124,7 +124,7 @@
 					    </div>
 						<!-- What -->
 						<div class="mt-1">
-						    <h2 class="title title--h3">Tôi có thể làm</h2>
+						    <h2 class="title title--h3">Dự án đã làm</h2>
 							<div class="row">
 							    <!-- Case Item -->
 							    <div class="col-12 col-lg-6">

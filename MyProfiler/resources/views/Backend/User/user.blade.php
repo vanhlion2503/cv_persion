@@ -6,11 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MYFROFILE | Quản lý trang cá nhân của bạn</title>
-    <link href="Backend/css/bootstrap.min.css" rel="stylesheet">
-    <link href="Backend/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="Backend/css/animate.css" rel="stylesheet">
-    <link href="Backend/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="Backend/css/custom.css">
+    <link href="{{ asset('Backend\css\bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('Backend\font-awesome\css\font-awesome.css') }}" rel="stylesheet">
+    <link href="{{ asset('Backend\css\animate.css') }}" rel="stylesheet">
+    <link href="{{ asset('Backend\css\style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('Backend\css\style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
@@ -20,8 +20,8 @@
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element"> <span>
-                                <img alt="image" class="img-circle" src="{{ asset('storage/' . $user->image)}}" width="30" height="30"/>
-                                </span>
+                        <img alt="image" class="img-circle" src=" {{ Auth::user()->image ?? asset('default-avatar.jpg') }}" width="30" height="30"/>
+
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{ $user->name }}</strong>
                                 </span> <span class="text-muted text-xs block">{{ $user->congviec }}</span> </span> </a>
@@ -91,7 +91,7 @@
                         <div class="row">
                             <div class="col-md-4 text-center">
                                 @if($user->image)
-                                    <img src="{{ asset('storage/' . $user->image) }}" width="150" class="rounded-circle user-image">
+                                    <img src="{{ Auth::user()->image ?? asset('default-avatar.jpg') }}" width="150" class="rounded-circle user-image">
                                 @else
                                     <img src="{{ asset('default-avatar.png') }}" width="150" class="rounded-circle user-image">
                                 @endif

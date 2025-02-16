@@ -69,7 +69,7 @@
 				<div class="header__left">
 					<div class="header__photo">
 						<img class="header__photo-img" 
-							src="{{ $user->image ? asset('storage/' . $user->image) : asset('images/default-avatar.png') }}" 
+							src="{{ Auth::user()->image ?? asset('default-avatar.jpg') }}" 
 							alt="{{ $user->name }}">
 					</div>
 					<div class="header__base-info">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -32,16 +33,17 @@ class BaivietController extends Controller
             'content' => 'required',
             'image'   => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-
-        // Lưu hình ảnh nếu có
-        $imagePath = $request->file('image') ? $request->file('image')->store('images', 'public') : null;
+        $imageUrl = null;
+        if ($request->hasFile('image')) {
+            $imageUrl = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
+        }
 
         // Tạo bài viết mới
         Auth::user()->posts()->create([
             'title'   => $request->title,
             'summary' => $request->summary,
             'content' => $request->content,
-            'image'   => $imagePath,
+            'image'   => $imageUrl,
         ]);
 
         return redirect()->route('baiviet.index')->with('success', 'Bài viết đã được tạo thành công.');
@@ -67,20 +69,22 @@ class BaivietController extends Controller
             'image'   => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        $imagePath = $post->image; // Giữ hình ảnh cũ nếu không có ảnh mới
+        $imageUrl = $post->image; // Giữ ảnh cũ nếu không có ảnh mới
 
         if ($request->hasFile('image')) {
+            // Xóa ảnh cũ trên Cloudinary nếu có
             if ($post->image) {
-                Storage::disk('public')->delete($post->image);
+                Cloudinary::destroy($post->image);
             }
-            $imagePath = $request->file('image')->store('images', 'public');
+            // Upload ảnh mới
+            $imageUrl = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
         }
 
         $post->update([
             'title'   => $request->title,
             'summary' => $request->summary,
             'content' => $request->content,
-            'image'   => $imagePath,
+            'image'   => $imageUrl,
         ]);
 
         return redirect()->route('baiviet.index')->with('success', 'Bài viết đã được cập nhật.');

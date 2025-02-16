@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Backend;
-
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -38,11 +38,21 @@ class Usercontroller extends Controller
             'image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
 
         ]);
-
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('profile_images', 'public');
-            $user->image = $imagePath;
-
+        if ($request->hasFile('image') && $request->file('image')->isValid()) {
+            $uploadedFile = $request->file('image');
+            
+            // Upload ảnh lên Cloudinary với try-catch
+            $uploadResponse = Cloudinary::upload(
+                $uploadedFile->getRealPath(),
+                ['folder' => 'profile_images']
+            );
+            
+            // Kiểm tra URL trả về
+            if (!$uploadResponse->getSecurePath()) {
+                throw new \Exception('Cloudinary không trả về URL hợp lệ.');
+            }
+            
+            $user->image = $uploadResponse->getSecurePath();
         }
         $user->name = $request->name;
         $user->email = $request->email;

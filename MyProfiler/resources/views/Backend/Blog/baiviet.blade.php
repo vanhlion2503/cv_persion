@@ -22,7 +22,7 @@
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element"> <span>
-                                <img alt="image" class="img-circle" src="{{ asset('storage/' . $user->image)}}" width="30" height="30"/>
+                                <img alt="image" class="img-circle" src="{{ Auth::user()->image ?? asset('default-avatar.jpg') }}" width="30" height="30"/>
                                 </span>
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{ $user->name }}</strong>
@@ -119,7 +119,7 @@
                         <label class="form-label">Ảnh Bài Viết</label>
                         <input type="file" name="image" class="form-control">
                         @if(isset($post) && $post->image)
-                            <img src="{{ asset('storage/' . $post->image) }}" alt="Ảnh Bài Viết" class="img-thumbnail mt-2" style="width: 150px;">
+                            <img src="{{ $post->image ?? asset('images/default.png') }}" alt="Ảnh Bài Viết" class="img-thumbnail mt-2" style="width: 150px;">
                         @endif
                     </div>
 
@@ -146,7 +146,7 @@
                         <tr>
                             <!-- Hiển thị ảnh, nếu không có ảnh sẽ dùng ảnh mặc định -->
                             <td style="width: 100px;">
-                                <img src="{{ asset($post->image ? 'storage/' . $post->image : 'images/default.jpg') }}" 
+                                <img src="{{ $post->image ?? asset('images/default.png') }}" 
                                     alt="{{ $post->title }}" 
                                     class="img-thumbnail" 
                                     style="width: 80px; height: 80px; object-fit: cover;">
