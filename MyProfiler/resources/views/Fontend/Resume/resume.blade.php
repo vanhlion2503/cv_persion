@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>vCard - Resume</title>
+    <title>MYPROFILE - Resume</title>
 
 	<!-- Meta Data -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -210,7 +210,7 @@
 			<li class="slideNav__item"><a href="background-2.html">Background triangles</a></li>
 			<li class="slideNav__item"><a href="works_v2.html">Works v2</a></li>
         </ul>
-		<a href="..\about.html" class="btn">Light Template</a>
+		<a href="{{route('auth.admin')}}" class="btn">Quản lý trang cá nhân</a>
 	</div>
 	<div class="overlay-slideNav"></div>
     <!-- Demo Menu -->

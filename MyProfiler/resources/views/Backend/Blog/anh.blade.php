@@ -5,12 +5,13 @@
     <base href="{{env('APP_URL') }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MYFROFILE | Quản lý trang cá nhân của bạn</title>
-    <link href="Backend/css/bootstrap.min.css" rel="stylesheet">
-    <link href="Backend/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="Backend/css/animate.css" rel="stylesheet">
-    <link href="Backend/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="Backend/css/custom.css">
+    <title>MYFROFILE | ADMIN</title>
+    <link href="{{ asset('Backend\css\bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('Backend\font-awesome\css\font-awesome.css') }}" rel="stylesheet">
+    <link href="{{ asset('Backend\css\animate.css') }}" rel="stylesheet">
+    <link href="{{ asset('Backend\css\style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('Backend\css\style.css') }}">
+    <link rel="stylesheet" href="{{ asset('Backend/css/custom.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 </head>
@@ -94,42 +95,42 @@
         </div>
     </div>
     <!-- Mainly scripts -->
-    <script src="Backend/js/jquery-3.1.1.min.js"></script>
-    <script src="Backend/js/bootstrap.min.js"></script>
-    <script src="Backend/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="Backend/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-    
+    <script src="{{ asset('Backend/js/jquery-3.1.1.min.js') }}"></script>
+    <script src="{{ asset('Backend/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('Backend/js/plugins/metisMenu/jquery.metisMenu.js') }}"></script>
+    <script src="{{ asset('Backend/js/plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
+
     <!-- Flot -->
-    <script src="Backend/js/plugins/flot/jquery.flot.js"></script>
-    <script src="Backend/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-    <script src="Backend/js/plugins/flot/jquery.flot.spline.js"></script>
-    <script src="Backend/js/plugins/flot/jquery.flot.resize.js"></script>
-    <script src="Backend/js/plugins/flot/jquery.flot.pie.js"></script>
-    <script src="Backend/js/plugins/flot/jquery.flot.symbol.js"></script>
-    <script src="Backend/js/plugins/flot/jquery.flot.time.js"></script>
+    <script src="{{ asset('Backend/js/plugins/flot/jquery.flot.js') }}"></script>
+    <script src="{{ asset('Backend/js/plugins/flot/jquery.flot.tooltip.min.js') }}"></script>
+    <script src="{{ asset('Backend/js/plugins/flot/jquery.flot.spline.js') }}"></script>
+    <script src="{{ asset('Backend/js/plugins/flot/jquery.flot.resize.js') }}"></script>
+    <script src="{{ asset('Backend/js/plugins/flot/jquery.flot.pie.js') }}"></script>
+    <script src="{{ asset('Backend/js/plugins/flot/jquery.flot.symbol.js') }}"></script>
+    <script src="{{ asset('Backend/js/plugins/flot/jquery.flot.time.js') }}"></script>
 
     <!-- Peity -->
-    <script src="Backend/js/plugins/peity/jquery.peity.min.js"></script>
-    <script src="Backend/js/demo/peity-demo.js"></script>
+    <script src="{{ asset('Backend/js/plugins/peity/jquery.peity.min.js') }}"></script>
+    <script src="{{ asset('Backend/js/demo/peity-demo.js') }}"></script>
 
     <!-- Custom and plugin javascript -->
-    <script src="Backend/js/inspinia.js"></script>
-    <script src="Backend/js/plugins/pace/pace.min.js"></script>
+    <script src="{{ asset('Backend/js/inspinia.js') }}"></script>
+    <script src="{{ asset('Backend/js/plugins/pace/pace.min.js') }}"></script>
 
     <!-- jQuery UI -->
-    <script src="Backend/js/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="{{ asset('Backend/js/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
 
     <!-- Jvectormap -->
-    <script src="Backend/js/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
-    <script src="js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="{{ asset('Backend/js/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js') }}"></script>
+    <script src="{{ asset('js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
 
     <!-- EayPIE -->
-    <script src="Backend/js/plugins/easypiechart/jquery.easypiechart.js"></script>
+    <script src="{{ asset('Backend/js/plugins/easypiechart/jquery.easypiechart.js') }}"></script>
 
     <!-- Sparkline -->
-    <script src="Backend/js/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script src="{{ asset('Backend/js/plugins/sparkline/jquery.sparkline.min.js') }}"></script>
 
-    <!-- Sparkline demo data  -->
-    <script src="Backend/js/demo/sparkline-demo.js"></script>
+    <!-- Sparkline demo data -->
+    <script src="{{ asset('Backend/js/demo/sparkline-demo.js') }}"></script>>
 </body>
 </html>

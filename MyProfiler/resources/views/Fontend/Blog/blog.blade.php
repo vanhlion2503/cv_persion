@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>vCard - Blog</title>
+    <title>MYFROFILE - Blog</title>
 	<base href="{{env('APP_URL') }}">
 
 	<!-- Meta Data -->
@@ -30,16 +30,17 @@
     <meta property="og:site_name" content="vCard">
 
 	<!-- Favicons -->
-	<link rel="apple-touch-icon" sizes="144x144" href="Fontend\assets\images\favicons\apple-touch-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="Fontend\assets\images\favicons\apple-touch-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="Fontend\assets\images\favicons\apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="57x57" href="Fontend\assets\images\favicons\apple-touch-icon-57x57.png">
-	<link rel="shortcut icon" href="Fontend\assets\images\favicons\favicon.png" type="image/png">
+	<link rel="apple-touch-icon" sizes="144x144" href="{{ asset('Fontend/assets/images/favicons/apple-touch-icon-144x144.png') }}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{ asset('Fontend/assets/images/favicons/apple-touch-icon-114x114.png') }}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{ asset('Fontend/assets/images/favicons/apple-touch-icon-72x72.png') }}">
+	<link rel="apple-touch-icon" sizes="57x57" href="{{ asset('Fontend/assets/images/favicons/apple-touch-icon-57x57.png') }}">
+	<link rel="shortcut icon" href="{{ asset('Fontend/assets/images/favicons/favicon.png') }}" type="image/png">
 
     <!-- Styles -->
-	<link rel="stylesheet" type="text/css" href="Fontend\assets\styles\style.css">
-	<link rel="stylesheet" type="text/css" href="Fontend\assets\styles\style-dark.css">
-    <link rel="stylesheet" type="text/css" href="Fontend\assets\demo\style-demo.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset('Fontend/assets/styles/style.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('Fontend/assets/styles/style-dark.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('Fontend/assets/demo/style-demo.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('Fontend/assets/css/login.css') }}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 	
 </head>
@@ -58,7 +59,7 @@
     <main class="main">
 	    <!-- Header Image -->
 		<div class="header-image">
-		    <div class="js-parallax" style="background-image: url(Fontend/assets/img/image_header.jpg);"></div>
+			<img src="{{ asset('Fontend/assets/img/image_header.jpg') }}" alt="Header Image">
 		</div>
 		
 	    <div class="container gutter-top">
@@ -133,7 +134,7 @@
 									<small>{{ $post->created_at->format('Y') }}</small>  <!-- Thêm năm vào đây -->
 								</div>
 									<a class="news-item__link" href="{{ route('user.blog.show', ['userId' => $user->id, 'postId' => $post->id]) }}"></a>
-								    <img class="cover lazyload" src="{{asset('storage/' . $post->image ?? 'default.jpg')}}" alt="">
+								    <img class="cover lazyload" src="{{ $post->image ?? asset('images/default.png') }}" alt="">
 								</div>
 								<div class="news-item__caption">
 								    <h2 class="title title--h4">{{ $post->title }}</h2>
@@ -173,15 +174,15 @@
 			<li class="slideNav__item"><a href="background-2.html">Background triangles</a></li>
 			<li class="slideNav__item"><a href="works_v2.html">Works v2</a></li>
         </ul>
-		<a href="..\about.html" class="btn">Light Template</a>
+		<a href="{{route('auth.admin')}}" class="btn">Quản lý trang cá nhân</a>
 	</div>
 	<div class="overlay-slideNav"></div>
     <!-- Demo Menu -->
 	
 	<!-- JavaScripts -->
-	<script src="Fontend\assets\js\jquery-3.4.1.min.js"></script>
-	<script src="Fontend\assets\js\plugins.min.js"></script>
-    <script src="Fontend\assets\js\common.js"></script>
-	<script src="Fontend\assets\demo\plugins-demo.js"></script>
+	<script src="{{ asset('Fontend/assets/js/jquery-3.4.1.min.js') }}"></script>
+	<script src="{{ asset('Fontend/assets/js/plugins.min.js') }}"></script>
+	<script src="{{ asset('Fontend/assets/js/common.js') }}"></script>
+	<script src="{{ asset('Fontend/assets/demo/plugins-demo.js') }}"></script>
 </body>
 </html>

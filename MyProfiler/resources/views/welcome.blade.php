@@ -125,92 +125,11 @@
 						<!-- What -->
 						<div class="mt-1">
 						    <h2 class="title title--h3">Dự án đã làm</h2>
-							<div class="row">
-							    <!-- Case Item -->
-							    <div class="col-12 col-lg-6">
-							        <div class="case-item">
-									    <img class="case-item__icon" src="..\assets\icons\dark\icon-design.svg" alt="">
-										<div>
-									        <h3 class="title title--h4">Web Design</h3>
-										    <p class="case-item__caption">The most modern and high-quality design made at a professional level.</p>
-										</div>	
-									</div>
-								</div>
-								
-								<!-- Case Item -->
-								<div class="col-12 col-lg-6">
-							        <div class="case-item">
-									    <img class="case-item__icon" src="..\assets\icons\dark\icon-dev.svg" alt="">
-										<div>
-									        <h3 class="title title--h4">Web Development</h3>
-										    <p class="case-item__caption">High-quality development of sites at the professional level.</p>
-										</div>
-									</div>
-								</div>
-								
-								<!-- Case Item -->
-								<div class="col-12 col-lg-6">
-								    <div class="case-item">
-								        <img class="case-item__icon" src="..\assets\icons\dark\icon-app.svg" alt="">
-										<div>
-								            <h3 class="title title--h4">Mobile Apps</h3>
-									        <p class="case-item__caption">Professional development of applications for iOS and Android.</p>
-										</div>
-								   </div>
-								</div>
-								
-								<!-- Case Item -->
-								<div class="col-12 col-lg-6">
-								    <div class="case-item">
-									    <img class="case-item__icon" src="..\assets\icons\dark\icon-photo.svg" alt="">
-										<div>
-									        <h3 class="title title--h4">Photography</h3>
-										    <p class="case-item__caption">I make high-quality photos of any category at a professional level.</p>
-										</div>
-									</div>
-								</div>
-							</div>	
 						</div>
 						
 						<!-- Clients -->
 						<div class="mt-4">
 						    <h2 class="title title--h3">Clients</h2>
-							
-							<div class="swiper-container js-carousel-clients">
-                                <div class="swiper-wrapper">
-								    <!-- Item client -->
-                                    <div class="swiper-slide">
-									    <a href="#"><img src="Fontend\assets\img\logo-1-dark.svg" alt="Logo"></a>
-									</div>
-									
-								    <!-- Item client -->
-                                    <div class="swiper-slide">
-									    <a href="#"><img src="Fontend\assets\img\logo-2-dark.svg" alt="Logo"></a>
-									</div>
-
-								    <!-- Item client -->
-                                    <div class="swiper-slide">
-									    <a href="#"><img src="Fontend\assets\img\logo-3-dark.svg" alt="Logo"></a>
-									</div>
-
-								    <!-- Item client -->
-                                    <div class="swiper-slide">
-									    <a href="#"><img src="Fontend\assets\img\logo-4-dark.svg" alt="Logo"></a>
-									</div>
-									
-								    <!-- Item client -->
-                                    <div class="swiper-slide">
-									    <a href="#"><img src="Fontend\assets\img\logo-1-dark.svg" alt="Logo"></a>
-									</div>
-									
-									<!-- Item client -->
-                                    <div class="swiper-slide">
-									    <a href="#"><img src="Fontend\assets\img\logo-2-dark.svg" alt="Logo"></a>
-									</div>
-								</div>
-								
-								<div class="swiper-pagination"></div>
-							</div>
 						</div>
 					</div>
 					
@@ -243,7 +162,7 @@
 			<li class="slideNav__item"><a href="background-2.html">Background triangles</a></li>
 			<li class="slideNav__item"><a href="works_v2.html">Works v2</a></li>
         </ul>
-		<a href="{{route('auth.admin')}}" class="btn">Đăng nhập</a>
+		<a href="{{route('auth.admin')}}" class="btn">Quản lý trang cá nhân</a>
 	</div>
 	<div class="overlay-slideNav"></div>
     <!-- Demo Menu -->
