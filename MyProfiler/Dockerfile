@@ -12,8 +12,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     && docker-php-ext-install pdo_mysql gd
 
-# Cài đặt Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
 
 # Đặt thư mục làm việc
 WORKDIR /var/www
