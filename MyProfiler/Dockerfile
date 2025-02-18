@@ -1,19 +1,24 @@
 # Sử dụng image PHP chính thức
 FROM php:8.2-fpm
 
-# Cập nhật package list và cài đặt thư viện cần thiết
+# Cập nhật package list và cài đặt các thư viện cần thiết
 RUN apt-get update && apt-get install -y \
-    libpng-dev \
-    libjpeg62-turbo-dev \
-    libfreetype6-dev \
     zip \
     unzip \
     git \
     curl \
-    libonig-dev \
     libxml2-dev \
+    && docker-php-ext-install pdo_mysql bcmath mbstring tokenizer \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Cấu hình và cài đặt extension GD (nếu cần thiết)
-RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install pdo_mysql gd bcmath mbstring tokenizer
+# Đặt thư mục làm việc
+WORKDIR /var/www
+
+# Sao chép toàn bộ project Laravel vào container
+COPY . .
+
+# Cài đặt Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+# Cài đặt dependencies
+RUN composer install --no-dev --optimize-autoloader
