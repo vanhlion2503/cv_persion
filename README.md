@@ -40,9 +40,41 @@ Tính năng nổi bật:
 
 ## Tạo project laravel
 
-'''
+```
 composer create-project --prefer-dist laravel/laravel QuanLyThuVien
 php artisan serve
-'''
+```
 
+## Tích hợp Aiven và laravel
+Cài đặt gói aiven-laravel:
+
+```
+composer require aiven-labs/aiven-laravel
+```
+Cấu hình kết nối:
+```
+php artisan aiven:getconfig
+```
+Câu hình .env cho Mysql trên Aiven:
+```
+DB_CONNECTION=mysql
+DB_HOST=your-aiven-host
+DB_PORT=your-aiven-port
+DB_DATABASE=your-database-name
+DB_USERNAME=your-username
+DB_PASSWORD=your-password
+DB_SSLMODE=require
+```
+
+## Tích hợp Cloudinary vào Laravel
+
+Cài đặt gói cloudinary-laravel:
+```
+composer require cloudinary-labs/cloudinary-laravel
+
+```
+Cấu hình kết nối file .env
+```
+CLOUDINARY_URL=cloudinary://API_KEY:API_SECRET@CLOUD_NAME
+```
 # Triển khai (Deployment)
