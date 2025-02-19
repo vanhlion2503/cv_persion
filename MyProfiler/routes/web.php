@@ -11,6 +11,7 @@ use App\Models\User;
 use App\Http\Controllers\Fontend\HomeController;
 use App\Http\Controllers\Backend\Socialcontroller;
 use App\Http\Controllers\Backend\Othercontroller;
+use App\Http\Controllers\Backend\SkillController;
 use App\Http\Controllers\Fontend\Blogcontroller;
 use App\Http\Controllers\Fontend\SingleBlogcontroller;
 use App\Http\Controllers\Backend\Baivietcontroller;
@@ -43,11 +44,17 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('other/index', [Othercontroller::class, 'index'])->name('other.index');
-    Route::post('/resume', [Othercontroller::class, 'store'])->name('resume.store');
-    Route::put('/resume/{resume}', [Othercontroller::class, 'update'])->name('resume.update');
-    Route::delete('/resume/{resume}', [Othercontroller::class, 'destroy'])->name('resume.destroy');
+    Route::get('other/index', [OtherController::class, 'index'])->name('other.index');
+
+    Route::post('/resume', [OtherController::class, 'storeResume'])->name('resume.store');
+    Route::put('/resume/{resume}', [OtherController::class, 'updateResume'])->name('resume.update');
+    Route::delete('/resume/{resume}', [OtherController::class, 'destroyResume'])->name('resume.destroy');
+
+    Route::post('/skills', [OtherController::class, 'storeSkill'])->name('skills.store');
+    Route::put('/skills/{skill}', [OtherController::class, 'updateSkill'])->name('skills.update');
+    Route::delete('/skills/{skill}', [OtherController::class, 'destroySkill'])->name('skills.destroy');
 });
+
 Route::middleware(['auth'])->group(function () {
     Route::get('baiviet', [BaivietController::class, 'index'])->name('baiviet.index');
     Route::post('baiviet', [BaivietController::class, 'store'])->name('baiviet.store');

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Social;
 use App\Models\User;
 use App\Models\Resume;
-
+use App\Models\Skill;
 class ResumeController extends Controller
 {
     public function index($id = null)
@@ -25,8 +25,9 @@ class ResumeController extends Controller
         // Lấy tất cả liên kết mạng xã hội
         $links = $user->socials;
         $resumes = $user->resumes()->orderBy('start_year', 'desc')->get();
+        $skills = $user->skills()->get();
 
 
-        return view('Fontend.Resume.resume', compact('user', 'links','resumes'));
+        return view('Fontend.Resume.resume', compact('user', 'links','resumes','skills'));
     }
 }

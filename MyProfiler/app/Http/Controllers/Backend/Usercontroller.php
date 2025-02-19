@@ -62,7 +62,6 @@ class Usercontroller extends Controller
         $user->congviec = $request->congviec;
         $user->gioithieu = $request->gioithieu;
         $user->save();
-
         return redirect()->route('user.index')->with('success', 'Cập nhật thành công!');
     }
 }

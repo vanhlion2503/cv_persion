@@ -51,7 +51,7 @@
                 </ul>
             </div>
         </nav>
-        <div id="page-wrapper" class="gray-bg">
+        <div id="page-wrapper" class="gray-bg" style="height: 1800px;">
         <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
@@ -142,6 +142,63 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+    <h1>Quản lý Kỹ Năng</h1>
+
+    <form id="skill-form" action="{{ route('skills.store') }}" method="POST">
+        @csrf
+        <input type="hidden" name="id" id="skill-id">
+        
+        <div class="form-group">
+            <label for="name">Tên Kỹ Năng:</label>
+            <input type="text" class="form-control" name="name" id="skill-name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="percentage">Phần Trăm (%):</label>
+            <select class="form-control" name="percentage" id="skill-percentage" required>
+                @for ($i = 1; $i <= 100; $i++)
+                    <option value="{{ $i }}">{{ $i }}%</option>
+                @endfor
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-2">Lưu</button>
+    </form>
+
+    <h3>Danh sách Kỹ Năng</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tên Kỹ Năng</th>
+                <th>Phần Trăm</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($skills as $skill)
+            <tr>
+                <td>{{ $skill->name }}</td>
+                <td>{{ $skill->percentage }}%</td>
+                <td>
+                    <button class="btn btn-warning btn-edit" 
+                        data-id="{{ $skill->id }}" 
+                        data-name="{{ $skill->name }}" 
+                        data-percentage="{{ $skill->percentage }}">
+                        Cập nhật
+                    </button>
+
+                    <form action="{{ route('skills.destroy', $skill) }}" method="POST" style="display:inline-block;">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-danger">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
         </div>
     </div>
     <script>
@@ -210,7 +267,17 @@
             row.querySelector('form').style.display = 'inline';
         }
     </script>
-
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.btn-edit').forEach(button => {
+        button.addEventListener('click', function () {
+            document.getElementById('skill-id').value = this.dataset.id;
+            document.getElementById('skill-name').value = this.dataset.name;
+            document.getElementById('skill-percentage').value = this.dataset.percentage;
+        });
+    });
+});
+</script>
     <!-- Mainly scripts -->
     <script src="{{ asset('Backend/js/jquery-3.1.1.min.js') }}"></script>
     <script src="{{ asset('Backend/js/bootstrap.min.js') }}"></script>

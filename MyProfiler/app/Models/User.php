@@ -33,7 +33,6 @@ class User extends Authenticatable
         'user_agent',
         'ip',
         'congviec',
-        
     ];
 
     /**
@@ -56,6 +55,8 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'skills' => 'array',
+            'skill_percentage' => 'array'
         ];
     }
     public function socials()
@@ -72,5 +73,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class);
     }
+    public function skills()
+    {
+        return $this->hasMany(Skill::class);
+    }
+
 
 }
