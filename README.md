@@ -1,5 +1,5 @@
 # Giới thiệu trang wed
-Là nền tảng tạo và chia sẻ hồ sơ cá nhân chuyên nghiệp, giúp bạn xây dựng CV dưới dạng portfolio trực tuyến một cách dễ dàng. Với giao diện trực quan là một trang web đặc biệt để quảng bá bản thân.
+Là một nền tảng tạo và chia sẻ hồ sơ cá nhân chuyên nghiệp, giúp bạn dễ dàng xây dựng CV dưới dạng portfolio trực tuyến, mang đến một giải pháp hiện đại và tiện lợi để giới thiệu bản thân một cách ấn tượng. Với giao diện trực quan, thân thiện và dễ sử dụng, bạn có thể nhanh chóng tạo ra một trang web cá nhân chuyên nghiệp để quảng bá kỹ năng, kinh nghiệm và thành tựu của mình đến nhà tuyển dụng, đối tác hoặc khách hàng tiềm năng.
 
 Tính năng nổi bật: 
 
@@ -16,8 +16,16 @@ Tính năng nổi bật:
 👨‍💻Nguyễn Trần Việt Anh
 
 # Chức năng
+## Use Case
+![image](https://github.com/user-attachments/assets/ad9b0dd6-fd16-4357-bb95-4427e5e4328a)
+
 
 ## Sơ đồ khối (Structural Diagram)
+![sơ đồ khối](https://github.com/user-attachments/assets/1f0a6782-c1d9-4754-9f72-c65b56175fc1)
+
+## Sơ đồ quan hệ
+![Screenshot 2025-02-19 212034](https://github.com/user-attachments/assets/1082f52c-8d2b-4609-a8aa-bc11cfa503de)
+
 
 ## Sơ đồ thuật toán (Behavioural Diagram)
 
@@ -30,7 +38,11 @@ Tính năng nổi bật:
 - Dùng Cloudinary để lưu trữ ảnh
 # Cài đặt (Installation)
 
+## Tạo project laravel
+
+'''
 composer create-project --prefer-dist laravel/laravel QuanLyThuVien
 php artisan serve
+'''
 
-#Triển khai (Deployment)
+# Triển khai (Deployment)
