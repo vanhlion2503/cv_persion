@@ -11,6 +11,7 @@
     <link href="{{ asset('Backend\css\animate.css') }}" rel="stylesheet">
     <link href="{{ asset('Backend\css\style.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('Backend\css\style.css') }}">
+    <link rel="stylesheet" href="{{ asset('Backend/css/custom.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
@@ -70,12 +71,14 @@
                 </li>
             </ul>
         </nav>
+        <div>
+        <div class="center-container">
+            <h1 class="logo-name">CV+</h1>
+        </div>
+        </div>
         <div class="footer">
             <div class="pull-right">
                 10GB of <strong>250GB</strong> Free.
-            </div>
-            <div>
-                <strong>Copyright</strong> Example Company &copy; 2014-2017
             </div>
         </div>
         </div>

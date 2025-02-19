@@ -23,15 +23,15 @@ class Authcontroller extends Controller
         $request->validate([
             'name' => 'required|unique:users',
             'email' => 'required|email|unique:users',
-            'password' => 'required|min:6',
+            'password' => 'required|min:6|confirmed',
         ]);
-
+    
         User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-
+    
         return redirect()->route('auth.admin')->with('success', 'Đăng ký thành công!');
     }
     public function login(Authrequest $request){

@@ -23,7 +23,7 @@ class Blogcontroller extends Controller
         }
 
         // Lấy tất cả liên kết mạng xã hội
-        $links = Social::all();
+        $links = $user->socials;
         $posts = $user->posts;
 
         return view('Fontend.Blog.blog', compact('user', 'links', 'posts'));

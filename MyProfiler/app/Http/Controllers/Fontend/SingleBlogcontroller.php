@@ -24,7 +24,7 @@ class SingleBlogcontroller extends Controller
     {
         $user = User::findOrFail($userId);  // Tìm thông tin người dùng
         $post = Post::findOrFail($postId);  // Kiểm tra bài viết thuộc người dùng đó
-        $links = Social::all();
+        $links = $user->socials;
 
         return view('Fontend.Blog.singleblog', compact('user', 'post', 'links'));
     }

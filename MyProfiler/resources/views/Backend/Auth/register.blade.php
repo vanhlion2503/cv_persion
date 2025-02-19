@@ -22,26 +22,28 @@
         <div>
             <div>
 
-                <h1 class="logo-name">IN+</h1>
+                <h1 class="logo-name">CV+</h1>
 
             </div>
             <h3>Đăng ký tài khoản</h3>
             <p>Hãy nhập thông tin vào đây.</p>
             <form class="m-t" role="form" action="{{ route('auth.register') }}" method="POST">
-            @csrf
+                @csrf
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Tên đăng nhập" required="" name="name">
+                    <input type="text" class="form-control" placeholder="Tên đăng nhập" required name="name">
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Email" required="" name="email">
+                    <input type="email" class="form-control" placeholder="Email" required name="email">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Mật khẩu"  name="password" required="">
+                    <input type="password" class="form-control" placeholder="Mật khẩu" name="password" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Xác nhận mật khẩu" name="password_confirmation" required>
                 </div>
                 <button type="submit" class="btn btn-primary block full-width m-b">Đăng ký</button>
-
                 <p class="text-muted text-center"><small>Bạn đã có tài khoản?</small></p>
-                <a class="btn btn-sm btn-white btn-block" href="{{route('auth.admin') }}">Đăng nhập</a>
+                <a class="btn btn-sm btn-white btn-block" href="{{ route('auth.admin') }}">Đăng nhập</a>
             </form>
         </div>
     </div>

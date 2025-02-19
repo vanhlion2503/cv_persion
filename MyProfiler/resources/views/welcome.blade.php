@@ -67,7 +67,7 @@
 				<div class="header__left">
 					<div class="header__photo">
 						<img class="header__photo-img" 
-							src="{{ Auth::user()->image ?? asset('default-avatar.jpg') }}" 
+							src="{{ $user->image ?? asset('default-avatar.jpg') }}" 
 							alt="{{ $user->name }}">
 					</div>
 					<div class="header__base-info">
@@ -89,14 +89,14 @@
 				<div class="header__right">
 					<ul class="header__contact">
 						<li><span class="overhead">Email</span> {{ $user->email ?? 'Chưa cập nhật' }}</li>
-						<li><span class="overhead">Số điện thoại</span> {{ $user->phone ?? 'Chưa cập nhật' }}</li>
+						<li><span class="overhead">Phone</span> {{ $user->phone ?? 'Chưa cập nhật' }}</li>
 					</ul>
 					<ul class="header__contact">
 						<li>
-							<span class="overhead">Sinh nhật</span> 
+							<span class="overhead">Birthday</span> 
 							{{ $user->birthday ?? 'Chưa cập nhật' }}
 						</li>
-						<li><span class="overhead">Địa chỉ</span> {{ $user->address ?? 'Chưa cập nhật' }}</li>
+						<li><span class="overhead">Address</span> {{ $user->address ?? 'Chưa cập nhật' }}</li>
 					</ul>
 				</div>
 			</header>
@@ -105,9 +105,9 @@
                 <aside class="col-12 col-md-12 col-lg-2">
 				    <div class="sidebar box sticky-column">
 	                    <ul class="nav">
-                            <li class="nav__item"><a class="active" href="{{route('showUser',['id' => $user->id])}}"><i class="icon-user"></i>Cá nhân</a></li>
-							<li class="nav__item"><a href="{{route('resume.user',['id' => $user->id])}}"><i class="icon-file-text"></i>Tóm tắt</a></li>
-                            <li class="nav__item"><a href="{{route('picture.index')}}"><i class="icon-codesandbox"></i>Kho ảnh</a></li>
+                            <li class="nav__item"><a class="active" href="{{route('showUser',['id' => $user->id])}}"><i class="icon-user"></i>About</a></li>
+							<li class="nav__item"><a href="{{route('resume.user',['id' => $user->id])}}"><i class="icon-file-text"></i>Resume</a></li>
+                            <li class="nav__item"><a href="{{route('picture.index')}}"><i class="icon-codesandbox"></i>Album</a></li>
                             <li class="nav__item"><a href="{{ route('blog.user', ['id' => $user->id]) }}"><i class="icon-book-open"></i>Blog</a></li>
                             <li class="nav__item"><a href="contact.html"><i class="icon-book"></i>Contact</a></li>
                         </ul>
@@ -125,6 +125,7 @@
 						<!-- What -->
 						<div class="mt-1">
 						    <h2 class="title title--h3">Dự án đã làm</h2>
+							
 						</div>
 						
 						<!-- Clients -->

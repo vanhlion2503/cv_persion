@@ -68,7 +68,7 @@
 				<div class="header__left">
 					<div class="header__photo">
 						<img class="header__photo-img" 
-							src="{{ Auth::user()->image ?? asset('default-avatar.jpg') }}" 
+							src="{{ $user->image ?? asset('default-avatar.jpg') }}" 
 							alt="{{ $user->name }}">
 					</div>
 					<div class="header__base-info">
@@ -91,14 +91,14 @@
 				<div class="header__right">
 					<ul class="header__contact">
 						<li><span class="overhead">Email</span> {{ $user->email ?? 'Chưa cập nhật' }}</li>
-						<li><span class="overhead">Số điện thoại</span> {{ $user->phone ?? 'Chưa cập nhật' }}</li>
+						<li><span class="overhead">Phone</span> {{ $user->phone ?? 'Chưa cập nhật' }}</li>
 					</ul>
 					<ul class="header__contact">
 						<li>
-							<span class="overhead">Sinh nhật</span> 
+							<span class="overhead">Birthday</span> 
 							{{ $user->birthday ?? 'Chưa cập nhật' }}
 						</li>
-						<li><span class="overhead">Địa chỉ</span> {{ $user->address ?? 'Chưa cập nhật' }}</li>
+						<li><span class="overhead">Address</span> {{ $user->address ?? 'Chưa cập nhật' }}</li>
 					</ul>
 				</div>
 			</header>  
