@@ -13,7 +13,7 @@ Tính năng nổi bật:
   
   Contact – Thông tin liên hệ để nhà tuyển dụng hoặc đối tác có thể kết nối với bạn.
 
-👨‍💻Ngueyễn Trần Việt Anh
+👨‍💻Nguyễn Trần Việt Anh
 
 # Chức năng
 
