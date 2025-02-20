@@ -4,7 +4,7 @@ use App\Http\Controllers\Backend\Authcontroller;
 use App\Http\Controllers\Backend\Dashboadcontroller;
 use App\Http\Controllers\Backend\Usercontroller;
 use Illuminate\Support\Facades\Route;
-use App\Http\Middleware\LoginMiddleware;
+use App\Http\Middleware\loginMiddleware;
 use App\Http\Middleware\AuthMiddeware;
 use App\Http\Resources\UserResource;
 use App\Models\User;
