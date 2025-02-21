@@ -77,3 +77,5 @@ Cấu hình kết nối file .env
 CLOUDINARY_URL=cloudinary://API_KEY:API_SECRET@CLOUD_NAME
 ```
 # Triển khai (Deployment)
+
+https://cvpersion-production.up.railway.app/
