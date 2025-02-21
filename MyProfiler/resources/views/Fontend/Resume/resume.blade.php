@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+<meta charset="utf-8">
     <title>MYPROFILE - Resume</title>
-
+    <base href="{{env('APP_URL') }}">
 	<!-- Meta Data -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,13 +18,13 @@
     <meta name="twitter:site" content="@ArtTemplates">
     <meta name="twitter:title" content="vCard">
     <meta name="twitter:description" content="vCard">
-    <meta name="twitter:image" content="../assets/images/social.jpg">
+    <meta name="twitter:image" content="Fontend/assets/images/social.jpg">
 
     <!-- Open Graph data -->
     <meta property="og:title" content="ArtTemplate">
     <meta property="og:type" content="website">
     <meta property="og:url" content="your url website">
-    <meta property="og:image" content="../assets/images/social.jpg">
+    <meta property="og:image" content="Fontend/assets/images/social.jpg">
     <meta property="og:description" content="vCard">
     <meta property="og:site_name" content="vCard">
 
@@ -41,7 +41,6 @@
 	<link rel="stylesheet" type="text/css" href="Fontend/assets/demo/style-demo.css">
 	<link rel="stylesheet" type="text/css" href="Fontend/assets/css/login.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-	
 </head>
 <body>
     <!-- Preloader -->
