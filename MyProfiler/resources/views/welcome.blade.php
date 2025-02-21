@@ -171,7 +171,7 @@
 	<!-- JavaScripts -->
 	<!-- JavaScripts -->
 	<script src="Fontend/assets/js/jquery-3.4.1.min.js"></script>
-	<script src="Fontend/assets/js/plugins.min.js') }}"></script>
+	<script src="Fontend/assets/js/plugins.min.js"></script>
 	<script src="Fontend/assets/js/common.js"></script>
 	<script src="Fontend/assets/demo/plugins-demo.js"></script>
 </body>
