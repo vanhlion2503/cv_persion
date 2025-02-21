@@ -57,7 +57,7 @@
 	    <!-- Header Image -->
 		<div class="header-image">
 			<div class="js-parallax">
-				<img src="{{ asset('Fontend/assets/img/image_header.jpg') }}" alt="Header Image">
+				<img src="Fontend/assets/img/image_header.jpg" alt="Header Image">
 			</div>
 		</div>
 
