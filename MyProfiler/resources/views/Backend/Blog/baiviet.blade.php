@@ -50,7 +50,7 @@
                 </ul>
             </div>
         </nav>
-        <div id="page-wrapper" class="gray-bg" style="height: 1300px;">
+        <div id="page-wrapper" class="gray-bg" style="height: 1700px;">
         <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
@@ -176,7 +176,6 @@
                     10GB of <strong>250GB</strong> Free.
                 </div>
                 <div>
-                    <strong>Copyright</strong> Example Company &copy; 2014-2017
                 </div>
             </div>
         </div>

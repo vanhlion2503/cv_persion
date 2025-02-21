@@ -144,7 +144,7 @@
 							</footer>
 						</div>
 					</div>
-					<!-- Footer -->
+
 		        </div>
 			</div>
 		</div>	

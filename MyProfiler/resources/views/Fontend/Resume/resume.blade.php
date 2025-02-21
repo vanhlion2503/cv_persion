@@ -144,17 +144,18 @@
 							<div class="col-12">
 								<!-- Item -->
 								<h2 class="title title--h3">My Skills</h2>
-								@foreach ($skills as $skill)
+								
 									<div class="box box__border">
 										<!-- Progress -->
+										@foreach ($skills as $skill)
 										<div class="progress">
 											<div class="progress-bar" role="progressbar" aria-valuenow="{{$skill->percentage}}" aria-valuemin="0" aria-valuemax="100">
 												<div class="progress-text">{{$skill->name}}<span></span><span>{{$skill->percentage}}%</span></div>
 											</div>
 											<div class="progress-text"><span>{{$skill->name}}</span></div>
                                     	</div>
-                                    @endforeach
-								</div>
+										@endforeach
+									</div>
                             </div>
 						</div>
 					</div>

@@ -57,3 +57,9 @@
     align-items: center;      /* Căn giữa theo chiều dọc */
     height: 100vh;            /* Chiều cao 100% màn hình */
 }
+.nut {
+    background: none !important; /* hoặc background: transparent !important; */
+    border: none !important;
+    box-shadow: none !important;
+  }
+  

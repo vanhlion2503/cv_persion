@@ -124,17 +124,12 @@
 						<!-- What -->
 						<div class="mt-1">
 						    <h2 class="title title--h3">Dự án đã làm</h2>
-							
-						</div>
-						
-						<!-- Clients -->
-						<div class="mt-4">
-						    <h2 class="title title--h3">Clients</h2>
+							<p>Đang phát triển</p>
 						</div>
 					</div>
 					
 					<!-- Footer -->
-					<footer class="footer">© 2020 vCard</footer>
+					<footer class="footer">© 2025 vCard</footer>
 		        </div>
 			</div>
 		</div>	
