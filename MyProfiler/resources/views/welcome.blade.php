@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>MY-FROFILER</title>
-
+<meta charset="utf-8">
+    <title>MYPROFILE - About</title>
+    <base href="{{env('APP_URL') }}">
 	<!-- Meta Data -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,13 +34,12 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="Fontend/assets/images/favicons/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="57x57" href="Fontend/assets/images/favicons/apple-touch-icon-57x57.png">
 	<link rel="shortcut icon" href="Fontend/assets/images/favicons/favicon.png" type="image/png">
-	<!-- Styles -->
+    <!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="Fontend/assets/styles/style.css">
 	<link rel="stylesheet" type="text/css" href="Fontend/assets/styles/style-dark.css">
 	<link rel="stylesheet" type="text/css" href="Fontend/assets/demo/style-demo.css">
 	<link rel="stylesheet" type="text/css" href="Fontend/assets/css/login.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-	
 </head>
 <body>
     <!-- Preloader -->

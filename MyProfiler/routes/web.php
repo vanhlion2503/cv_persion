@@ -20,7 +20,7 @@ use App\Http\Controllers\Fontend\Picturecontroller;
 use App\Http\Controllers\Fontend\ResumeController;
 
 
-Route::get('/', [HomeController::class, 'index'])->name('about.index')->middleware(AuthMiddeware::class);
+Route::get('/', [Authcontroller::class,'index'])->name('auth.admin')->middleware(LoginMiddleware::class);
 Route::get('about/{id}', [HomeController::class, 'showUser'])->name('showUser');
 Route::get('darkboard/index', [Dashboadcontroller::class,'index'])->name('darkboard.index')->middleware(AuthMiddeware::class);
 Route::get('admin', [Authcontroller::class,'index'])->name('auth.admin')->middleware(LoginMiddleware::class);
