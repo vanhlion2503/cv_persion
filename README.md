@@ -28,6 +28,16 @@ Tính năng chính:
 
 ## Sơ đồ thuật toán (Behavioural Diagram)
 
+Đăng ký
+![Screenshot 2025-02-22 210501](https://github.com/user-attachments/assets/bb599c24-39d1-4b02-bab4-a28c922bb773)
+
+Đăng nhập
+![Screenshot 2025-02-22 210626](https://github.com/user-attachments/assets/7b3835fd-0634-479c-8f78-1f01bc5f9a6c)
+
+Thêm sửa xóa
+![Screenshot 2025-02-22 213833](https://github.com/user-attachments/assets/cde2fe77-2833-4a14-9494-613a9cb53a45)
+
+
 # Công nghệ (Technologies)
 
 - Dùng PHP Laravel Framework
