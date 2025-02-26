@@ -1,4 +1,6 @@
-# Giới thiệu trang wed
+# Giới thiệu trang web
+Web tạo và chia sẻ hồ sơ
+
 Là một nền tảng tạo và chia sẻ hồ sơ cá nhân chuyên nghiệp, giúp bạn dễ dàng xây dựng CV dưới dạng portfolio trực tuyến, mang đến một giải pháp hiện đại và tiện lợi để giới thiệu bản thân một cách ấn tượng. Với giao diện trực quan, thân thiện và dễ sử dụng, bạn có thể nhanh chóng tạo ra một trang web cá nhân chuyên nghiệp để quảng bá kỹ năng, kinh nghiệm và thành tựu của mình đến nhà tuyển dụng, đối tác hoặc khách hàng tiềm năng.
 
 Tính năng chính: 
