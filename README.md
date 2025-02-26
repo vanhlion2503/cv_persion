@@ -93,4 +93,6 @@ CLOUDINARY_URL=cloudinary://API_KEY:API_SECRET@CLOUD_NAME
 ```
 # Triển khai (Deployment)
 
-https://cvpersion-production.up.railway.app/
+<a href="https://cvpersion-production.up.railway.app/">Xem trang của tôi</a>
+
+
