@@ -25,6 +25,7 @@ Route::get('about/{id}', [HomeController::class, 'showUser'])->name('showUser');
 Route::get('darkboard/index', [Dashboadcontroller::class,'index'])->name('darkboard.index')->middleware(AuthMiddeware::class);
 Route::get('admin', [Authcontroller::class,'index'])->name('auth.admin')->middleware(LoginMiddleware::class);
 Route::get('logout', [Authcontroller::class,'logout'])->name('auth.logout');
+Route::get('login', [Authcontroller::class, 'index'])->name('auth.admin');
 Route::post('login', [Authcontroller::class,'login'])->name('auth.login');
 
 Route::get('register', [Authcontroller::class,'showRegisterForm'])->name('auth.register');

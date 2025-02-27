@@ -144,9 +144,6 @@
 							@endforeach
 						</div>
 					</div>
-					
-					<!-- Footer -->
-					<footer class="footer">© 2020 vCard</footer>
 		        </div>
 			</div>
 		</div>	

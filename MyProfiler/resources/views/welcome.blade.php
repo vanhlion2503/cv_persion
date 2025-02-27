@@ -127,9 +127,6 @@
 							<p>Đang phát triển</p>
 						</div>
 					</div>
-					
-					<!-- Footer -->
-					<footer class="footer">© 2025 vCard</footer>
 		        </div>
 			</div>
 		</div>	
